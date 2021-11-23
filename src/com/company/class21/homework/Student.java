@@ -1,5 +1,7 @@
 package com.company.class21.homework;
 
+import jdk.nashorn.internal.runtime.regexp.joni.Syntax;
+
 public class Student {
     public void attendClasses(){
         System.out.println("All students have to attend classes in order to learn");
@@ -50,21 +52,28 @@ class SchoolStudent extends Student{
 }
 class Tester{
     public static void main(String[] args){
-        Student a=new Student();
-        a.attendClasses();
+        Student a=new SyntaxStudent();
         a.cryBeforeExam();
-        SyntaxStudent b=new SyntaxStudent();
-        b.attendClasses();
-        b.solveRepls();
+        a.attendClasses();
+        a.submittAssignments();
+        SyntaxStudent b=(SyntaxStudent) a;
         b.studyTillMidnight();
-        CollegeStudent c=new CollegeStudent();
+        b.solveRepls();
+
+        Student c=new CollegeStudent();
         c.attendClasses();
         c.cryBeforeExam();
-        c.gainExperience();
-        SchoolStudent d=new SchoolStudent();
-        d.attendClasses();
-        d.wakeUpEarly();
+        CollegeStudent d=(CollegeStudent)c;
         d.submittAssignments();
+        d.gainExperience();
+
+        Student e=new SchoolStudent();
+        e.cryBeforeExam();
+        e.studyTillMidnight();
+        SchoolStudent f=(SchoolStudent) e;
+        f.submittAssignments();
+        f.wakeUpEarly();
+
 
     }
 }
