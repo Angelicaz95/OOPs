@@ -64,6 +64,13 @@ class CreditCardTester{
 
 
         }
+        for(CreditCard card: cc){
+            card.payOffBalance();
+            card.checkRewards();
+            
+
+        }
+
 
     }
 }
