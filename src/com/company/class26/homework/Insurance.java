@@ -67,7 +67,7 @@ class InsuranceTester{
         i.add(new Pet("Pet insurance", "Dog"));
         i.add(new Health("Blue Cross Blue Shield"));
 
-        System.out.println("Advance for looop");
+        System.out.println("Advanced for loop");
 
         for(Insurance insurances: i){
             insurances.getQuota();
